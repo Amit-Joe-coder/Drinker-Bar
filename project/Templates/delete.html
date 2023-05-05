@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body %}
+<div align="center">
+    <form method="POST">
+        {% csrf_token %}
+        <h3>Do You Really Want to Delete {{item.name}}</h3>
+        <input type="submit" class="btn btn-danger" value="Yes">
+        <a href="/info" class="btn btn-info">Cancel</a>
+    </form>
+</div>
+{% endblock %}
